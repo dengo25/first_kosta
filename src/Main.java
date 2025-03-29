@@ -7,6 +7,7 @@ public class Main {
 
         RunMenu runMenu = new RunMenu();
 
-        runMenu.run();
+        runMenu.itemRun();
+        runMenu.customerRun();
     }
 }

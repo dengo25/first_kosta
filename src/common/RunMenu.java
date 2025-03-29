@@ -14,7 +14,7 @@ public class RunMenu {
     int itemId, itemQty, itemPrice;
     String itemName, itemManuf, itemPromo;
 
-    public void run() {
+    public void itemRun() {
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println(" ================================");
@@ -144,7 +144,7 @@ public class RunMenu {
 
     //========================================================================
     //우진님 코드
-    public void CustomerRun() {
+    public void customerRun() {
         Scanner sc = new Scanner(System.in);
         int menu, re; //menu ==> 메뉴 선택을 위한 변수
         String cname, birth, addr, phone; //상품 정보를 담을 변수
