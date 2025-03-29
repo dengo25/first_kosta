@@ -26,6 +26,7 @@ public class ItemDAO {
             } else {
                 System.out.println("제품 삭제 실패.");
             }
+            ConnectionProvider.close(conn, pstmt);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -65,6 +66,7 @@ public class ItemDAO {
                 itemVO.setItemMadeDate(itemMadeDate);
                 itemVO.setItemExpDate(itemExpDate);
 
+                ConnectionProvider.close(conn, pstmt, rs);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -110,6 +112,7 @@ public class ItemDAO {
                 itemVO.setItemExpDate(itemExpDate);
 
             }
+            ConnectionProvider.close(conn, pstmt, rs);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -151,6 +154,7 @@ public class ItemDAO {
                 itemVO.setItemExpDate(itemExpDate);
 
                 lists.add(itemVO);
+                ConnectionProvider.close(conn, stmt, rs);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -193,7 +197,7 @@ public class ItemDAO {
             } else {
                 System.out.println("제품 등록을 실패했습니다.");
             }
-
+            ConnectionProvider.close(conn,pstmt);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
