@@ -7,7 +7,7 @@ public class CustomerVO {
 
     private int custId;
     private String custName;
-    private Date custBirth;
+    private String  custBirth;
     private String custAddr;
     private String custPhone;
 
@@ -19,11 +19,11 @@ public class CustomerVO {
         this.custAddr = custAddr;
     }
 
-    public Date getCustBirth() {
+    public String getCustBirth() {
         return custBirth;
     }
 
-    public void setCustBirth(Date custBirth) {
+    public void setCustBirth(String custBirth) {
         this.custBirth = custBirth;
     }
 
@@ -54,7 +54,7 @@ public class CustomerVO {
     public CustomerVO() {
     }
 
-    public CustomerVO(String custAddr, Date custBirth, int custId, String custName, String custPhone) {
+    public CustomerVO(int custId, String custName, String custBirth, String custAddr, String custPhone) {
         this.custAddr = custAddr;
         this.custBirth = custBirth;
         this.custId = custId;
